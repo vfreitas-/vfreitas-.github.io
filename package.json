@@ -50,12 +50,14 @@
     "url": "git@github.com:vfreitas-/vfreitas.com.br.git"
   },
   "scripts": {
+    "upload:github": "gh-pages -d public -b master",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy": "npm run build && npm run upload:github"
   }
 }
