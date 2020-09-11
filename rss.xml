@@ -1,45 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog | Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Sep 2020 05:32:53 GMT</lastBuildDate><item><title><![CDATA[Hello World]]></title><description><![CDATA[This is my first post on my new fake blog! How exciting! I’m sure I’ll write a lot more interesting things in the future. Oh, and here’s a…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/hello-world/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>&lt;p&gt;This is my first post on my new fake blog! How exciting!&lt;/p&gt;
-&lt;p&gt;I’m sure I’ll write a lot more interesting things in the future.&lt;/p&gt;
-&lt;p&gt;Oh, and here’s a great quote from this Wikipedia on
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Salted_duck_egg&quot;&gt;salted duck eggs&lt;/a&gt;.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;A salted duck egg is a Chinese preserved food product made by soaking duck
-eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-charcoal paste. The eggs may also be sold with the salted paste removed,
-wrapped in plastic, and vacuum packed. From the salt curing process, the
-salted duck eggs have a briny aroma, a gelatin-like egg white and a
-firm-textured, round yolk that is bright orange-red in color.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog | Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Sep 2020 19:36:37 GMT</lastBuildDate><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde de uma forma bem…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Fri, 11 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 581px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg&quot;
+    href=&quot;/static/1c6cc23e23443601a17f652910f4f952/92d15/monorepo-multirepo.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dXC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACEhEy/9oACAEBAAEFAkqW2DlnRj73yf/EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQL/2gAIAQIBAT8Bi6f/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAbEAADAQADAQAAAAAAAAAAAAABESEAMUGBof/aAAgBAQABPyGxNMfrLHmCDZmAzzvJJDjEQCHv/9oADAMBAAIAAwAAABDIL//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxARhylZv//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EFoktI//xAAdEAEBAAICAwEAAAAAAAAAAAABEQAxIWFBcYHh/9oACAEBAAE/EEbMLQ0fMHDVaPIXyI4pk4JUnWacNCtO8ojDE9TGIYES7/Jn/9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 70.27027027027026%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAAB80lEQVQ4y3VT227TQBD1//8MCCGBUCoVKipxechDENAmTm0H7DjxJfF1bceHOVvvNqnKSCN7dmbOzJzZdZIkQdM0qKoKbdui73ut5uxc67pG13VWaZ/78zyHw0QjWZZhuVxivV6jKks8l3EctW+z2cD3fZxOpws/sRwiUwYJLgUkiiL8DUMcivIikEq/53laCXw8HvU5O1VK6a9Ty4EqCxT7GHtR3Ukv46R7xHEkCbVOIh0E5Nd0S5s6DIMd3ylVh/buB3bXb/Hp5h1qqdQED8hmr3H7+QPSZIdGQMwk7ISgBCAo+abdTjGOadmXMeI41kF0Br6HUEY/X5BZhDkj+Pn3EZCbO40IwgiHw9HyGURbpGlmCzBhPp/rIhSCLxYLuK6rbTtyxXZ3W5SBi4f1PZQEtnmG2lsJ+SuUxdGOZKbhdk1XtMmh7ZAcKvcO+9sZvny9RtP1UOEf5Dfv8f3bR+RZaoN19xNnBKIQ3CztiUMBXXm+bDl5JF5A3WAjV2hrExicpSlyoeWkR+71tTkc8gueHT2CtMzgcrrMBKFdFIX+Z3Ulei+XPomEw6qQ4lv8/vXTcvrE4TTK+Wt4brPQaF7FLsT+6g2uZq/Qd2pqYLDPzwIy0YCZf2OzuumgboQr/TI6OyZ9htcLwJfe7kvn/xMC/gPVnjfU5d0XrQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Chinese Salty Egg&quot;
-        title=&quot;Chinese Salty Egg&quot;
-        src=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/1c72d/salty_egg.jpg&quot;
-        srcset=&quot;/static/8058f3f26913fea3b6a89a73344fe94a/a80bd/salty_egg.jpg 148w,
-/static/8058f3f26913fea3b6a89a73344fe94a/1c91a/salty_egg.jpg 295w,
-/static/8058f3f26913fea3b6a89a73344fe94a/1c72d/salty_egg.jpg 590w,
-/static/8058f3f26913fea3b6a89a73344fe94a/a8a14/salty_egg.jpg 885w,
-/static/8058f3f26913fea3b6a89a73344fe94a/fbd2c/salty_egg.jpg 1180w,
-/static/8058f3f26913fea3b6a89a73344fe94a/e1596/salty_egg.jpg 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        alt=&quot;Multirepo vs Monorepo&quot;
+        title=&quot;Multirepo vs Monorepo&quot;
+        src=&quot;/static/1c6cc23e23443601a17f652910f4f952/92d15/monorepo-multirepo.png&quot;
+        srcset=&quot;/static/1c6cc23e23443601a17f652910f4f952/12f09/monorepo-multirepo.png 148w,
+/static/1c6cc23e23443601a17f652910f4f952/e4a3f/monorepo-multirepo.png 295w,
+/static/1c6cc23e23443601a17f652910f4f952/92d15/monorepo-multirepo.png 581w&quot;
+        sizes=&quot;(max-width: 581px) 100vw, 581px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde de uma forma bem &lt;em&gt;simplista&lt;/em&gt; podemos entender como uma forma de definirmos se iremos manter nosso código de varios projetos em apenas um repositorio versionado (git) ou em varios repositórios, onde cada projeto terá o seu por exemplo.&lt;/p&gt;
+&lt;p&gt;Nesse post vamos falar sobre como criar o seu monorepo utilizando Javascript, não muito sobre quais são os casos indicados de cada arquitetura, ou seus prós e contras, porém vou deixar aqui uma comparação simples das duas abordagens:&lt;/p&gt;</content:encoded></item></channel></rss>
