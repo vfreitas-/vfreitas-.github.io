@@ -50,15 +50,18 @@ const Layout = ({ location, title, children }) => {
   return (
     <div
       style={{
+        display: `flex`,
+        flexDirection: 'column',
         marginLeft: `auto`,
         marginRight: `auto`,
-        maxWidth: rhythm(24),
+        maxWidth: 900,
+        minHeight: '100vh',
         padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
       }}
     >
       <header>{header}</header>
       <main>{children}</main>
-      <footer>
+      <footer style={{ marginTop: 'auto' }}>
         © {new Date().getFullYear()}, Built with
         {` `}
         <a href="https://www.gatsbyjs.org">Gatsby</a>
