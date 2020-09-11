@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Blog | Vitor Freitas`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Vitor Freitas`,
+      summary: `Frontender que adora fazer aquela animação em CSS`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `vfreitasb_`,
+      github: `vfreitas-`,
     },
   },
   plugins: [
