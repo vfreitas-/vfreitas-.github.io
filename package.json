@@ -51,7 +51,6 @@
     "url": "git@github.com:vfreitas-/vfreitas-.github.io.git"
   },
   "scripts": {
-    "github:upload": "gh-pages -d public",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
@@ -59,7 +58,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "github:upload": "gh-pages -d public",
     "github:clean" : "gh-pages-clean",
-    "deploy": "npm run build && npm run github:upload"
+    "deploy": "npm run build && npm run github:clean && npm run github:upload"
   }
 }
