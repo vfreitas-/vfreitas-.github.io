@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog | Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 11 Sep 2020 19:52:06 GMT</lastBuildDate><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde de uma forma bem…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Fri, 11 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog | Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 14 Sep 2020 13:27:58 GMT</lastBuildDate><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Thu, 17 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 581px; &quot;
     &gt;
@@ -27,5 +27,134 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde de uma forma bem &lt;em&gt;simplista&lt;/em&gt; podemos entender como uma forma de definirmos se iremos manter nosso código de varios projetos em apenas um repositorio versionado (git) ou em varios repositórios, onde cada projeto terá o seu por exemplo.&lt;/p&gt;
-&lt;p&gt;Nesse post vamos falar sobre como criar o seu monorepo utilizando Javascript, não muito sobre quais são os casos indicados de cada arquitetura, ou seus prós e contras, porém vou deixar aqui uma comparação simples das duas abordagens:&lt;/p&gt;</content:encoded></item></channel></rss>
+&lt;p&gt;Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas de definirmos se iremos manter nosso código de varios projetos em apenas um repositorio versionado (git) ou em varios repositórios onde cada projeto terá o seu por exemplo.&lt;/p&gt;
+&lt;p&gt;Nesse post vamos falar sobre como criar o seu monorepo utilizando Javascript, não muito sobre quais são os casos indicados de cada arquitetura, ou seus prós e contras, porém vou deixar aqui uma comparação simples das duas abordagens:&lt;/p&gt;
+&lt;h2&gt;Multirepo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Varios repositórios, normalmente 1 por projeto.&lt;/li&gt;
+&lt;li&gt;Cada projeto tem o seu processo de deploy separado, com testes automatizados e builds apenas daquele projeto, sendo então mais rápidos e previsíveis.&lt;/li&gt;
+&lt;li&gt;Cada repositório tem as suas dependencias com suas versões e é independente, porém normalmente isso leva a duplicamento de dependencias, ou a conflito e versões.&lt;/li&gt;
+&lt;li&gt;Os times possuem mais autonomia, podendo realizar mudanças em seu repositório sem envolver outros times.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Monorepo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Um repositório para varios projetos e times.&lt;/li&gt;
+&lt;li&gt;Como temos um repositório só é “mais simples” para novos membros se situarem.&lt;/li&gt;
+&lt;li&gt;Os times tem menos autonomia, já que qualquer mudança pode impactar outros projetos, e boa parte das alterações devem ser alinhadas e planejadas entre os times.&lt;/li&gt;
+&lt;li&gt;As dependencias dos projetos são unificadas e centralizadas, fazendo com que todos os projetos respeitem uma mesma versão de uma dependencia X, assim gerando menos conflitos e duplicamento de dependencias.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tem varios outros pontos a se levar em conta na hora de escolher qual caminho deve ser tomado na sua empresa/projeto, lembre-se, não existe bala de prata ;), mas realizar uma escolha que faça sentido com a cultura da empresa, e dos times envolvidos, com certeza trará mais benefícios.&lt;/p&gt;
+&lt;p&gt;Agora vamos para a prática ;)&lt;/p&gt;
+&lt;h2&gt;Início do projeto&lt;/h2&gt;
+&lt;p&gt;Para começar vamos criar um novo projeto, que será um monorepo e que terá a princípio duas bibliotecas. Para isso vamos utilizar duas ferramentas importantes, o &lt;a href=&quot;https://lerna.js.org/&quot;&gt;Lerna&lt;/a&gt; e o &lt;a href=&quot;https://classic.yarnpkg.com/en/docs/workspaces/&quot;&gt;Yarn Workspaces&lt;/a&gt;. Cada uma delas tem o seu papel em nos fornecer funcionalidades para nos ajudar a gerenciar nosso monorepo, por isso devem ser usadas em conjunto, já que &lt;em&gt;uma não substitui a outra&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Agora para começar vamos instalar os dois:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;O Yarn possui seus próprios métodos de &lt;a href=&quot;https://classic.yarnpkg.com/en/docs/install&quot;&gt;instalação dependendo do sistema operacional&lt;/a&gt;
+Para manter a simplicidade iremos instalar da forma mais simples, apesar de &lt;a href=&quot;https://classic.yarnpkg.com/en/docs/install/#alternatives-stable&quot;&gt;não recomendada pelo Yarn&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt;
+$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g lerna&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Depois podemos criar nosso projeto usando a CLI do Lerna:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ lerna init&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora precisamos integrar o Yarn Workspaces com o Lerna, para isso precisamos adicionar duas configuracoes, e configurar o &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; das nossas duas bibliotecas!&lt;/p&gt;
+&lt;p&gt;package.json&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;private&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// E dizemos pro Yarn que esse package.json princípal, é privado, e não deve ser publicado!&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;workspaces&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Adicionamos essa entrada mapeando o mesmo caminho de packages que já veio&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;packages&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// configurado pelo Lerna! Essa entrada é para avisar o Yarn workspaces, quais são os &lt;/span&gt;
+      &lt;span class=&quot;token string&quot;&gt;&quot;packages/**&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// seus workspaces&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;lerna.json&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;npmClient&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;yarn&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Indicamos ao Lerna que estamos usando o yarn invés do npm&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;useWorkspaces&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// E dizemos que o workspaces do yanr esta habilitado!&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;packages&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;packages/*&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0.0.0&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E depois criamos dois &lt;code class=&quot;language-text&quot;&gt;packages&lt;/code&gt; que serão nossas bibliotecas, e adicionamos um &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; para cada:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/5d7a4324926042ce2ebf6449e13f53ce/8c557/packages-novos.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50.67567567567568%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABYlAAAWJQFJUiTwAAABVUlEQVQoz42S6XaCMBCFfYzKlgRkDYsQCKjVbvZ0+eH7v83tgKitp9j+uCdhknxzZ5hZLDv4fgmvasA2GmytIaoa3mIJzx91tQ9ChUTqQXHSIKTvoNAIYoVZGGv4bg6+ajD/bDE/dLC6Cpyn4C5J/CYJxi/iTMJKcjh0fwC6boYoVTD2Dey1AvcyCCeFIKgQtHf/ECVx5BJ8kWEWEVAQuVpGcDaKXHYwen20MJ+aI7x3NQEa4pTYyUdg79CjR4GsYbxqWI8NrId6uHjSFPB8TkBbFmDe6JBTWXlGwZ2C+UzQXQ27LuGU5b+BTnp22MIPEmSKgFvq41sL470dXNordRP4o+RiBAYELNKQRobc3ddHUF3BNRIIW14e0XrTYXYFFNsKd4fVMDbmXsN8oVYE+RnIJ/7wEGdUHbWH+X0Pk5YOyE2Yg/VKqLkRzaWf3y73O/CUlNYvcNUlxPXcassAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Imagem das duas bibliotecas novas&quot;
+        title=&quot;Imagem das duas bibliotecas novas&quot;
+        src=&quot;/static/5d7a4324926042ce2ebf6449e13f53ce/fcda8/packages-novos.png&quot;
+        srcset=&quot;/static/5d7a4324926042ce2ebf6449e13f53ce/12f09/packages-novos.png 148w,
+/static/5d7a4324926042ce2ebf6449e13f53ce/e4a3f/packages-novos.png 295w,
+/static/5d7a4324926042ce2ebf6449e13f53ce/fcda8/packages-novos.png 590w,
+/static/5d7a4324926042ce2ebf6449e13f53ce/8c557/packages-novos.png 700w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;packages/log-lib/package.json&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@my-monorepo/log-lib&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1.0.0&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;packages/math-lib/package.json&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@my-monorepo/math-lib&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1.0.0&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E depois rodamos o comando referente ao &lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt; do Yarn, para que ele possa identificar nossos workspaces, e baixar tudo que for preciso.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Agora se olharmos no &lt;code class=&quot;language-text&quot;&gt;node_modules&lt;/code&gt; do nosso projeto, podemos ver que o Yarn já cuidou de criar as referencias aos nossas duas bibliotecas, e deixar disponível para caso outro projeto dentro do monorepo queira utiliza-lo:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8bd97cad81116ea3552f58969704ebb4/31198/node-modules-com-packages.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 76.35135135135135%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAABsklEQVQ4y6WU607CQBCFeRAVet/tvaVyqa2lKHIJXglgook/jDG+/wMcZxdJACWU+ONkmt3p1zOz061pegDGEzDnAtzNZLT9ArZ3Cc2IoKg+VO2wFJKmh6gpqgfDDMHsLsEy6GYTJmvDYC2Z1FDcylK1YAXUhUu7Qw5zuSgTGo6MYr+KJFBfAw0COl0qtYQTlLIEAVwnHg00CMjdlGB96dKLBrB49x8O6YE7KR1EAYt6qVJz16VXdfmrZAEU5QqoZsRbsOOBui97yOTYZOQy/QXaB9388LZD6qGYPyacUhRuvXggyz8E2wGuBpPxNkw7l6orAU5OOU7PbEqscCj0vmElK2CdxkO8aDETcZIizUZotXtIkhxNkqK6OKtzkv0T/5JNDC7htSDqIYz76KQFbu8XWCzf8fL6iendC8aTZzTPrxFGpcwJ43JHq7WIYqszhOvnqGXFI3pXSwxGr1g8f2G+/MTT/ANp/ohu9oDLco6ivyDN96pH++PpG0HH1ENNNNSH51vI8xyTyQzT2xmGowcMbu7oP48qjY1o3c4pd+CGBfyoj4DKMK0I4ibanMUql8M3+kzFlgEaNHYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Nossas bibliotecas na node_modules&quot;
+        title=&quot;Nossas bibliotecas na node_modules&quot;
+        src=&quot;/static/8bd97cad81116ea3552f58969704ebb4/fcda8/node-modules-com-packages.png&quot;
+        srcset=&quot;/static/8bd97cad81116ea3552f58969704ebb4/12f09/node-modules-com-packages.png 148w,
+/static/8bd97cad81116ea3552f58969704ebb4/e4a3f/node-modules-com-packages.png 295w,
+/static/8bd97cad81116ea3552f58969704ebb4/fcda8/node-modules-com-packages.png 590w,
+/static/8bd97cad81116ea3552f58969704ebb4/31198/node-modules-com-packages.png 694w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Publicando nossos pacotes&lt;/h2&gt;
+&lt;p&gt;Agora vamos ver como publicar nossos pacotes e testa-los localmente.&lt;/p&gt;
+&lt;p&gt;…&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://verdaccio.org/docs/en/installation&quot;&gt;https://verdaccio.org/docs/en/installation&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Por hoje é só&lt;/h2&gt;
+&lt;p&gt;Na parte 2 falaremos sobre como criar um processo automatizado de deploy (CI/CD) para o nosso monorepo, de forma que a gente possa publicar automaticamente nossas bibliotecas no npm (ou outro registro) depois de cada commit/pull request na master ;)&lt;/p&gt;
+&lt;p&gt;Obrigado por ler!&lt;/p&gt;</content:encoded></item></channel></rss>
