@@ -34,7 +34,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               marginBottom: rhythm(1),
             }}
           >
-            {post.frontmatter.date}
+            {post.frontmatter.date} | {post.timeToRead} min. de leitura
           </p>
         </header>
         <section dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -90,7 +90,8 @@ export const pageQuery = graphql`
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt(pruneLength: 160)
-      html
+      html,
+      timeToRead,
       frontmatter {
         title
         date(formatString: "DD MMMM, YYYY", locale: "pt-br")
