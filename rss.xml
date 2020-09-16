@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog | Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Sep 2020 19:00:05 GMT</lastBuildDate><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Thu, 17 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog | Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://gatsby-starter-blog-demo.netlify.app</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 16 Sep 2020 18:53:58 GMT</lastBuildDate><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas…]]></description><link>https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.app/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Thu, 17 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 581px; &quot;
     &gt;
@@ -119,11 +119,13 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
 &lt;p&gt;packages/log-lib/package.json&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@my-monorepo/log-lib&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;index.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1.0.0&quot;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;packages/math-lib/package.json&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@my-monorepo/math-lib&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;main&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;index.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
   &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;1.0.0&quot;&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;E depois rodamos o comando referente ao &lt;code class=&quot;language-text&quot;&gt;npm install&lt;/code&gt; do Yarn, para que ele possa identificar nossos workspaces, e baixar tudo que for preciso.&lt;/p&gt;
@@ -160,11 +162,122 @@ $ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Publicando nossos pacotes&lt;/h2&gt;
-&lt;p&gt;Agora vamos ver como publicar nossos pacotes e testa-los localmente, e depois como publica-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).&lt;/p&gt;
+&lt;p&gt;Agora vamos ver como publicar nossos pacotes e testa-los localmente, e depois como publicá-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).&lt;/p&gt;
+&lt;h3&gt;Verdaccio&lt;/h3&gt;
 &lt;p&gt;Para publicar nossos pacotes localmente vamos utilizar o &lt;a href=&quot;https://verdaccio.org/docs/en/installation&quot;&gt;Verdaccio&lt;/a&gt; que é um registro privado feito com NodeJs, de fácil configuração e que nos permite adicionar ou buscar pacotes pelo NPM, da mesma forma que buscamos e adicionamos pacotes no próprio registro do NPM.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;O que é um registro?&lt;/em&gt; É basicamente um repositório de pacotes/bibliotecas que possui uma API para buscar/adicionar pacotes, é compatível com o &lt;a href=&quot;https://semver.org/&quot;&gt;semver&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;Para usar o Verdaccio, basta instala-lo globalmente:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; -g verdaccio&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E iniciá-lo:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ verdaccio&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Ele vai retornar para a gente, em qual URL o registro dele esta rodando:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/490571b9240d40b08fed592b61259695/5faa8/verdaccio-rodando.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.567567567567565%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAxElEQVQY002P226EMAxEc3FuG5KQRRRWBJa+9P//cOolSO3DaMayNfIRZrOoZ0GeEuIQYZ2BfijopKAegiWhowIlDR3UX049qyD7/S2hhcOxHzjeO+ZlRts3vNoLoXiUKSMMHlQUTCWYrGFG1pOucmX/yXcXmhz2d0M72u0b1ragfo34/jnxXCvsSging18sPBPZmQv952Om8QZCcpGQ3bUxiCkijxl1qnDBXRg06AuN+KsrlxuZ9ck0EO8tz9SLJBcKgV9r9Fk4eSq+OAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Verdaccio rodando&quot;
+        title=&quot;Verdaccio rodando&quot;
+        src=&quot;/static/490571b9240d40b08fed592b61259695/fcda8/verdaccio-rodando.png&quot;
+        srcset=&quot;/static/490571b9240d40b08fed592b61259695/12f09/verdaccio-rodando.png 148w,
+/static/490571b9240d40b08fed592b61259695/e4a3f/verdaccio-rodando.png 295w,
+/static/490571b9240d40b08fed592b61259695/fcda8/verdaccio-rodando.png 590w,
+/static/490571b9240d40b08fed592b61259695/efc66/verdaccio-rodando.png 885w,
+/static/490571b9240d40b08fed592b61259695/c83ae/verdaccio-rodando.png 1180w,
+/static/490571b9240d40b08fed592b61259695/5faa8/verdaccio-rodando.png 1444w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Depois nos guardamos essa URL, onde aqui &lt;em&gt;na minha máquina&lt;/em&gt; é a &lt;code class=&quot;language-text&quot;&gt;http://localhost:4873/&lt;/code&gt;, pois vamos precisar dela na hora de publicar nossos pacotes.&lt;/p&gt;
+&lt;h3&gt;Configurando o Lerna para publicar&lt;/h3&gt;
+&lt;p&gt;Para publicar nossos pacotes e gerar versão automaticamente precisamos apenas dizer para o Lerna como queremos que ele faça isso, e rodar alguns comandos dele, além de definir no nosso &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; algumas informações sobre nossos pacotes.&lt;/p&gt;
+&lt;p&gt;Primeiro vamos adicionar algumas configurações no nosso &lt;code class=&quot;language-text&quot;&gt;lerna.json&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// ...&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// Alteramos nosso version para &quot;independent&quot;, isso faz com que o Lerna tenha uma versão &lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// única para cada pacote nosso, assim eles podem evoluir de forma independente&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;independent&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; 
+  &lt;span class=&quot;token property&quot;&gt;&quot;command&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;version&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;allowBranch&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;master&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Dizemos que a única branch que tem permissão de gerar uma versão é a master&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Ao publicar nossos pacotes o Lerna vai automaticamente realizar um commit no repositório&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Atualizando coisas como versões nos package.json, e criando um CHANGELOG.md&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;message&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;chore(release): publish version %s&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Permite o Lerna pular qualquer etapa de teste ou &lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// lint na hora de realizar o commit caso seu projeto tenha&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;noCommitHooks&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Pedimos para ele ignorar mudanças no yarn.lock&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;ignoreChanges&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;yarn.lock&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Diz para o Lerna usar os conventional commits para detectar a versão, explicado abaixo&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;conventionalCommits&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;O ConventionalCommits é um padrão de mensagem de commit, que tem como o objetivo tornar as mensagens mais explicitas e
+diretas, além de permitir que a versão daquele projeto seja gerenciado de forma automática através dessas mensagens.
+&lt;em&gt;Recomento fortemente&lt;/em&gt; que você leia mais a respeito na &lt;a href=&quot;https://www.conventionalcommits.org/en/v1.0.0/&quot;&gt;página oficial da convenção&lt;/a&gt;, e para facilitar &lt;a href=&quot;https://github.com/BeeTech-global/bee-stylish/tree/master/commits&quot;&gt;tem uma pequena explicação em português desse padrão.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Agora podemos adicionar um simples script de release no nosso &lt;code class=&quot;language-text&quot;&gt;package.json&lt;/code&gt; na raiz:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;//...&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;release&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;lerna publish&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;//...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E para finalizar, adicionar dois arquivos javascript simples, dentro dos nossos dois pacotes &lt;code class=&quot;language-text&quot;&gt;math-lib&lt;/code&gt; e &lt;code class=&quot;language-text&quot;&gt;log-lib&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// math-lib/index.js&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;factorialize&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;num &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    num &lt;span class=&quot;token operator&quot;&gt;*=&lt;/span&gt; i&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; num&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; factorialize&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// log-lib/index.js&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;logSomething&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;LOG-LIB: &apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; logSomething&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Publicando&lt;/h3&gt;
+&lt;p&gt;E para finalmente publicar nossos pacotes precisamos apontar para um registro, ou logar na nossa conta do NPM, e publicá-los de forma pública. Nesse caso iremos usar nosso amigo Verdaccio, que configuramos acima e publicar nosso pacote no nosso registro local, para isso precisamos adicionar uma ultima configuração no nosso package.json da raiz:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;//...&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;publishConfig&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;registry&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;http://localhost:4873&quot;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Aqui é a URL do Verdaccio&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;//...&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;E pra finalizar vamos rodar nosso comando de release:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;yarn&lt;/span&gt; release&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Bônus: Publicando dentro de uma pipeline de CI/CD&lt;/h3&gt;
+&lt;p&gt;…&lt;/p&gt;
 &lt;h2&gt;Por hoje é só&lt;/h2&gt;
 &lt;p&gt;Na parte 2 falaremos sobre como criar um processo automatizado de deploy (CI/CD) para o nosso monorepo, de forma que a gente possa publicar automaticamente nossas bibliotecas no npm (ou outro registro) depois de cada commit/pull request na master ;)&lt;/p&gt;
 &lt;p&gt;Obrigado por ler!&lt;/p&gt;</content:encoded></item></channel></rss>
