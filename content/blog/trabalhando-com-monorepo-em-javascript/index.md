@@ -98,6 +98,7 @@ packages/log-lib/package.json
 ```json
 {
   "name": "@my-monorepo/log-lib",
+  "main": "index.js",
   "version": "1.0.0"
 }
 ```
@@ -106,6 +107,7 @@ packages/math-lib/package.json
 ```json
 {
   "name": "@my-monorepo/math-lib",
+  "main": "index.js",
   "version": "1.0.0"
 }
 ```
@@ -122,12 +124,130 @@ Agora se olharmos no `node_modules` do nosso projeto, podemos ver que o Yarn já
 
 ## Publicando nossos pacotes
 
-Agora vamos ver como publicar nossos pacotes e testa-los localmente, e depois como publica-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).
+Agora vamos ver como publicar nossos pacotes e testa-los localmente, e depois como publicá-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).
+
+### Verdaccio
 
 Para publicar nossos pacotes localmente vamos utilizar o [Verdaccio](https://verdaccio.org/docs/en/installation) que é um registro privado feito com NodeJs, de fácil configuração e que nos permite adicionar ou buscar pacotes pelo NPM, da mesma forma que buscamos e adicionamos pacotes no próprio registro do NPM.
 
 > *O que é um registro?* É basicamente um repositório de pacotes/bibliotecas que possui uma API para buscar/adicionar pacotes, é compatível com o [semver](https://semver.org/)
 
+Para usar o Verdaccio, basta instala-lo globalmente:
+
+```bash
+$ npm install -g verdaccio
+```
+
+E iniciá-lo:
+
+```bash
+$ verdaccio
+```
+
+Ele vai retornar para a gente, em qual URL o registro dele esta rodando:
+
+![Verdaccio rodando](./verdaccio-rodando.png)
+
+Depois nos guardamos essa URL, onde aqui _na minha máquina_ é a `http://localhost:4873/`, pois vamos precisar dela na hora de publicar nossos pacotes.
+
+### Configurando o Lerna para publicar
+
+Para publicar nossos pacotes e gerar versão automaticamente precisamos apenas dizer para o Lerna como queremos que ele faça isso, e rodar alguns comandos dele, além de definir no nosso `package.json` algumas informações sobre nossos pacotes.
+
+Primeiro vamos adicionar algumas configurações no nosso `lerna.json`:
+
+```json
+{
+  // ...
+  // Alteramos nosso version para "independent", isso faz com que o Lerna tenha uma versão 
+  // única para cada pacote nosso, assim eles podem evoluir de forma independente
+  "version": "independent", 
+  "command": {
+    "version": {
+      "allowBranch": ["master"], // Dizemos que a única branch que tem permissão de gerar uma versão é a master
+      // Ao publicar nossos pacotes o Lerna vai automaticamente realizar um commit no repositório
+      // Atualizando coisas como versões nos package.json, e criando um CHANGELOG.md
+      "message": "chore(release): publish version %s",
+      // Permite o Lerna pular qualquer etapa de teste ou 
+      // lint na hora de realizar o commit caso seu projeto tenha
+      "noCommitHooks": true,
+      // Pedimos para ele ignorar mudanças no yarn.lock
+      "ignoreChanges": ["yarn.lock"],
+      // Diz para o Lerna usar os conventional commits para detectar a versão, explicado abaixo
+      "conventionalCommits": true
+    }
+  }
+}
+```
+
+
+---
+
+> O ConventionalCommits é um padrão de mensagem de commit, que tem como o objetivo tornar as mensagens mais explicitas e 
+> diretas, além de permitir que a versão daquele projeto seja gerenciado de forma automática através dessas mensagens.
+> *Recomento fortemente* que você leia mais a respeito na [página oficial da convenção](https://www.conventionalcommits.org/en/v1.0.0/), e para facilitar [tem uma pequena explicação em português desse padrão.](https://github.com/BeeTech-global/bee-stylish/tree/master/commits)
+
+Agora podemos adicionar um simples script de release no nosso `package.json` na raiz:
+
+```json
+{
+  //...
+  "scripts": {
+    "release": "lerna publish"
+  },
+  //...
+}
+```
+
+E para finalizar, adicionar dois arquivos javascript simples, dentro dos nossos dois pacotes `math-lib` e `log-lib`:
+
+```js
+// math-lib/index.js
+
+function factorialize(num) {
+  if (num === 0 || num === 1)
+    return 1;
+  for (var i = num - 1; i >= 1; i--) {
+    num *= i;
+  }
+  return num;
+}
+
+module.exports = factorialize;
+
+// log-lib/index.js
+
+function logSomething(data) {
+  console.log('LOG-LIB: ', data);
+}
+
+module.exports = logSomething;
+
+```
+
+### Publicando
+
+E para finalmente publicar nossos pacotes precisamos apontar para um registro, ou logar na nossa conta do NPM, e publicá-los de forma pública. Nesse caso iremos usar nosso amigo Verdaccio, que configuramos acima e publicar nosso pacote no nosso registro local, para isso precisamos adicionar uma ultima configuração no nosso package.json da raiz:
+
+```json
+{
+  //...
+  "publishConfig": {
+    "registry": "http://localhost:4873" // Aqui é a URL do Verdaccio
+  },
+  //...
+}
+```
+
+E pra finalizar vamos rodar nosso comando de release:
+
+```bash
+$ yarn release
+```
+
+### Bônus: Publicando dentro de uma pipeline de CI/CD
+
+...
 
 ## Por hoje é só 
 
