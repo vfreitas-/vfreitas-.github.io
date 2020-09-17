@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Blog | Vitor Freitas`,
+    title: `Vitor Freitas`,
     author: {
       name: `Vitor Freitas`,
       summary: `Frontender que adora fazer aquela animação em CSS`,
     },
     description: `Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
+    siteUrl: `https://vfreitas.com.br`,
     social: {
       twitter: `vfreitasb_`,
       github: `vfreitas-`,
@@ -62,11 +62,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Blog | Vitor Freitas`,
+        short_name: `Vitor Freitas`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#0088ff`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },

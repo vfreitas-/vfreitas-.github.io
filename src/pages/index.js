@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Home | Vitor Freitas - Front-end" />
       <Bio />
       {!posts.length && (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
