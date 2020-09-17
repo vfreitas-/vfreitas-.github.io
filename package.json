@@ -59,7 +59,7 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "github:upload": "gh-pages -d public",
-    "github:clean" : "gh-pages-clean",
+    "github:clean": "gh-pages-clean",
     "deploy": "npm run build && npm run github:clean && npm run github:upload"
   }
 }
