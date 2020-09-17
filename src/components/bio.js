@@ -41,7 +41,6 @@ const Bio = () => {
     <div
       style={{
         display: `flex`,
-        marginBottom: rhythm(2.5),
       }}
     >
       <Image
@@ -61,10 +60,19 @@ const Bio = () => {
         Escrito por <strong>{author.name}</strong> {author.summary}
         {` `}
         <p>
-          <a href={`https://twitter.com/${social.twitter}`} style={{ marginRight: 12 }}>
+          <a
+            href={`https://twitter.com/${social.twitter}`}
+            target="_blank"
+            rel="noopener"
+            style={{ marginRight: 12 }}
+          >
             Twitter
           </a>
-          <a href={`https://github.com/${social.github}`}>
+          <a
+            href={`https://github.com/${social.github}`}
+            target="_blank"
+            rel="noopener"
+          >
             Github
           </a>
         </p>
