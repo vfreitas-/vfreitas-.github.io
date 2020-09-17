@@ -283,6 +283,10 @@ Se você olhar no nosso monorepo após a release, encontrará arquivos chamados 
 
 Essa é a funcionalidade do Lerna de histório de mudanças através das mensagens de cada commit. Ele pega essas mensagens e lista elas nesse arquivo de Changelog, deixando mais fácil o rastreamento de mudanças das nossas bibliotecas.
 
+## Source code
+
+O código do projeto de teste usado como exemplo nesse artigo [pode ser encontrado aqui](https://github.com/vfreitas-/blog-example-monorepo-javascript)
+
 ## Por hoje é só 
 
 Uma evolução do que aprendemos aqui hoje, seria configurarmos esse processo de release de forma automatizada ao se realizar um commit ou merge de uma Pull Request na branch master por exemplo, dessa forma as versões dos nossos pacotes sempre seriam geradas automaticamente em cada merge e publicadas no registro, habilitando então um processo de CI/CD.
