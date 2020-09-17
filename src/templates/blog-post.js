@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <SEO
-        title={`${post.frontmatter.title} | Vitor Freitas - Front-end`}
+        title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
       <article>

@@ -63,7 +63,7 @@ const Bio = () => {
           <a
             href={`https://twitter.com/${social.twitter}`}
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
             style={{ marginRight: 12 }}
           >
             Twitter
@@ -71,7 +71,7 @@ const Bio = () => {
           <a
             href={`https://github.com/${social.github}`}
             target="_blank"
-            rel="noopener"
+            rel="noreferrer noopener"
           >
             Github
           </a>
