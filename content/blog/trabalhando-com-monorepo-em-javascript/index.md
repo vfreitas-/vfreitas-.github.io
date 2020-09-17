@@ -7,7 +7,7 @@ description: "Configurando Lerna e Yarn workspaces"
 
 ![Multirepo vs Monorepo](./monorepo-multirepo.png)
 
-Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas de definirmos se iremos manter nosso código de vários projetos em apenas um repositório versionado (git) ou em vários repositórios onde cada projeto terá o seu por exemplo.
+Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas de definirmos se iremos manter nosso código de vários projetos em apenas um repositório versionado (git) ou em vários repositórios onde cada projeto irá ter o seu git por exemplo.
 
 Nesse post vamos falar sobre como criar o seu monorepo utilizando Javascript, não muito sobre quais são os casos indicados de cada arquitetura, ou seus prós e contras, porém vou deixar aqui uma comparação simples das duas abordagens:
 
@@ -31,9 +31,9 @@ Agora vamos para a prática ;)
 
 ## Início do projeto
 
-Para começar vamos criar um novo projeto, que será um monorepo e que terá a princípio duas bibliotecas. Para isso vamos utilizar duas ferramentas importantes, o [Lerna](https://lerna.js.org/) e o [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/). Cada uma delas tem o seu papel em nos fornecer funcionalidades para nos ajudar a gerenciar nosso monorepo, por isso devem ser usadas em conjunto, já que *uma não substitui a outra*.
+Para começar vamos criar um novo projeto, que será um monorepo e que terá a princípio duas bibliotecas. Para isso vamos utilizar duas ferramentas importantes, o [Lerna](https://lerna.js.org/) e o [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/). Cada uma delas tem o seu papel em nos fornecer funcionalidades que vão nos ajudar a gerenciar nosso monorepo, por isso devem ser usadas em conjunto, já que *uma não substitui a outra*.
 
-Vamos falar um pouco dos dois antes de partir pro código:
+Vamos falar um pouco dos dois antes de partir pro código.
 
 ### Yarn Workspaces
 
@@ -47,7 +47,7 @@ Já o Lerna é uma ferramenta que cuida da parte mais de "cima" de um monorepo, 
 
 Agora para começar vamos instalar os dois:
 
->O Yarn possui seus próprios métodos de [instalação dependendo do sistema operacional](https://classic.yarnpkg.com/en/docs/install)
+>O Yarn possui seus próprios métodos de [instalação dependendo do sistema operacional](https://classic.yarnpkg.com/en/docs/install).
 > Para manter a simplicidade iremos instalar da forma mais simples, apesar de [não recomendada pelo Yarn](https://classic.yarnpkg.com/en/docs/install/#alternatives-stable)
 
 ```bash
@@ -124,7 +124,7 @@ Agora se olharmos no `node_modules` do nosso projeto, podemos ver que o Yarn já
 
 ## Publicando nossos pacotes
 
-Agora vamos ver como publicar nossos pacotes e testa-los localmente, e depois como publicá-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).
+Agora vamos ver como publicar nossos pacotes e testá-los localmente, e depois como publicá-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).
 
 ### Verdaccio
 
@@ -144,7 +144,7 @@ E iniciá-lo:
 $ verdaccio
 ```
 
-Ele vai retornar para a gente, em qual URL o registro dele esta rodando e qual o seu arquivo de configuração:
+Ele vai retornar em qual URL o registro dele esta rodando e qual o seu arquivo de configuração:
 
 ![Verdaccio rodando](./verdaccio-rodando.png)
 
