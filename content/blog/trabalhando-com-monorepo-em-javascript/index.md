@@ -1,6 +1,6 @@
 ---
 title: "Trabalhando com Monorepo em Javascript"
-date: "2020-09-17"
+date: "2020-09-18"
 draft: true
 description: "Configurando Lerna e Yarn workspaces"
 ---
@@ -144,11 +144,31 @@ E iniciá-lo:
 $ verdaccio
 ```
 
-Ele vai retornar para a gente, em qual URL o registro dele esta rodando:
+Ele vai retornar para a gente, em qual URL o registro dele esta rodando e qual o seu arquivo de configuração:
 
 ![Verdaccio rodando](./verdaccio-rodando.png)
 
-Depois nos guardamos essa URL, onde aqui _na minha máquina_ é a `http://localhost:4873/`, pois vamos precisar dela na hora de publicar nossos pacotes.
+Vamos deixar ele rolando em um terminal separado e guardar a URL dele, onde aqui _na minha máquina_ é a `http://localhost:4873/`, pois vamos precisar dela na hora de publicar nossos pacotes. E vamos acessar o arquivo de configuração que no meu caso fica em `~/.config/verdaccio/config.yaml` e adicionar as seguintes linhas dando permissão de publicação sem precisar de autenticação (*apenas para ambientes locais!*):
+
+```yml
+packages:
+  '@my-monorepo/*':
+      # scoped packages
+      access: $all
+      publish: $anonymous
+      unpublish: $anonymous
+```
+
+E caso você queira já deixar essa configuração padrão para todos os pacotes futuros, podemos habilitar isso usando o `**` dentro de packages:
+
+```yml
+'**':
+    access: $all
+    publish: $anonymous
+    unpublish: $anonymous
+```
+
+E pronto ;)
 
 ### Configurando o Lerna para publicar
 
@@ -163,11 +183,14 @@ Primeiro vamos adicionar algumas configurações no nosso `lerna.json`:
   // única para cada pacote nosso, assim eles podem evoluir de forma independente
   "version": "independent", 
   "command": {
+    "publish": {
+      "registry": "http://localhost:4873" // Aqui é a URL do Verdaccio
+    },
     "version": {
       "allowBranch": ["master"], // Dizemos que a única branch que tem permissão de gerar uma versão é a master
       // Ao publicar nossos pacotes o Lerna vai automaticamente realizar um commit no repositório
       // Atualizando coisas como versões nos package.json, e criando um CHANGELOG.md
-      "message": "chore(release): publish version %s",
+      "message": "chore(release): publicando versão",
       // Permite o Lerna pular qualquer etapa de teste ou 
       // lint na hora de realizar o commit caso seu projeto tenha
       "noCommitHooks": true,
@@ -179,7 +202,6 @@ Primeiro vamos adicionar algumas configurações no nosso `lerna.json`:
   }
 }
 ```
-
 
 ---
 
@@ -227,30 +249,44 @@ module.exports = logSomething;
 
 ### Publicando
 
-E para finalmente publicar nossos pacotes precisamos apontar para um registro, ou logar na nossa conta do NPM, e publicá-los de forma pública. Nesse caso iremos usar nosso amigo Verdaccio, que configuramos acima e publicar nosso pacote no nosso registro local, para isso precisamos adicionar uma ultima configuração no nosso package.json da raiz:
+E para finalmente publicar nossos pacotes precisamos apontar para um registro, ou logar na nossa conta do NPM, e publicá-los de forma pública. Nesse caso iremos usar nosso amigo Verdaccio, que configuramos acima e publicar nosso pacote no nosso registro local.
 
-```json
-{
-  //...
-  "publishConfig": {
-    "registry": "http://localhost:4873" // Aqui é a URL do Verdaccio
-  },
-  //...
-}
-```
-
-E pra finalizar vamos rodar nosso comando de release:
+Então vamos rodar nosso comando de release:
 
 ```bash
 $ yarn release
 ```
 
-### Bônus: Publicando dentro de uma pipeline de CI/CD
+Ao rodar esse comando, o Lerna vai calcular as versões dos pacotes existentes e pedir uma confirmação se esta tudo ok:
 
-...
+![Lerna mensagem de confirmação](./lerna-publish-confirmacao.png)
+
+E ao confirmar ele irá publicar essas versões dos nossos pacotes:
+
+![Lerna mensagem de confirmação](./lerna-publish-sucesso.png)
+
+E pronto ;) pacotes publicados.
+
+Agora podemos instalar eles a partir de qualquer outro projeto, é só apontar na hora do install para o nosso registro local (Verdaccio), dessa forma:
+
+```bash
+$ npm install @my-monorepo/math-lib@1.0.1 --registry http://localhost:4873
+```
+
+E consumir o conteúdo da sua nova biblioteca ;).
+
+### Bônus: Changelog
+
+Se você olhar no nosso monorepo após a release, encontrará arquivos chamados de [CHANGELOG.md](https://en.wikipedia.org/wiki/Changelog), além de um commit diferente no histórico do git do seu projeto, algo assim:
+
+![Commit do Lerna](./commit-lerna.png)
+
+Essa é a funcionalidade do Lerna de histório de mudanças através das mensagens de cada commit. Ele pega essas mensagens e lista elas nesse arquivo de Changelog, deixando mais fácil o rastreamento de mudanças das nossas bibliotecas.
 
 ## Por hoje é só 
 
-Na parte 2 falaremos sobre como criar um processo automatizado de deploy (CI/CD) para o nosso monorepo, de forma que a gente possa publicar automaticamente nossas bibliotecas no npm (ou outro registro) depois de cada commit/pull request na master ;)
+Uma evolução do que aprendemos aqui hoje, seria configurarmos esse processo de release de forma automatizada ao se realizar um commit ou merge de uma Pull Request na branch master por exemplo, dessa forma as versões dos nossos pacotes sempre seriam geradas automaticamente em cada merge e publicadas no registro, habilitando então um processo de CI/CD.
+
+Em um próximo artigo, falaremos em como realizar essa automatização em uma pipeline, além de boas práticas.
 
 Obrigado por ler!
