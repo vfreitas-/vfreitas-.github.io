@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -10,6 +11,13 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
+
+  let disqusConfig = {
+    // TODO: get this from config later
+    url: `${'https://vfreitas.com.br'+location.pathname}`,
+    identifier: post.id,
+    title: post.title,
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -45,6 +53,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         <footer>
           <Bio />
+          <hr/>
+          <CommentCount config={disqusConfig} placeholder=""/>
+          <Disqus config={disqusConfig} />
         </footer>
       </article>
 
