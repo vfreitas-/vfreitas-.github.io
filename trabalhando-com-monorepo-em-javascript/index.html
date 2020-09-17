@@ -27,7 +27,7 @@
       />
   </a>
     </span></p>
-<p>Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas de definirmos se iremos manter nosso código de vários projetos em apenas um repositório versionado (git) ou em vários repositórios onde cada projeto terá o seu por exemplo.</p>
+<p>Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas de definirmos se iremos manter nosso código de vários projetos em apenas um repositório versionado (git) ou em vários repositórios onde cada projeto irá ter o seu git por exemplo.</p>
 <p>Nesse post vamos falar sobre como criar o seu monorepo utilizando Javascript, não muito sobre quais são os casos indicados de cada arquitetura, ou seus prós e contras, porém vou deixar aqui uma comparação simples das duas abordagens:</p>
 <h2>Multirepo</h2>
 <ul>
@@ -46,8 +46,8 @@
 <p>Tem vários outros pontos a se levar em conta na hora de escolher qual caminho deve ser tomado na sua empresa/projeto, lembre-se, não existe bala de prata ;), mas realizar uma escolha que faça sentido com a cultura da empresa, e dos times envolvidos, com certeza trará mais benefícios.</p>
 <p>Agora vamos para a prática ;)</p>
 <h2>Início do projeto</h2>
-<p>Para começar vamos criar um novo projeto, que será um monorepo e que terá a princípio duas bibliotecas. Para isso vamos utilizar duas ferramentas importantes, o <a href="https://lerna.js.org/">Lerna</a> e o <a href="https://classic.yarnpkg.com/en/docs/workspaces/">Yarn Workspaces</a>. Cada uma delas tem o seu papel em nos fornecer funcionalidades para nos ajudar a gerenciar nosso monorepo, por isso devem ser usadas em conjunto, já que <em>uma não substitui a outra</em>.</p>
-<p>Vamos falar um pouco dos dois antes de partir pro código:</p>
+<p>Para começar vamos criar um novo projeto, que será um monorepo e que terá a princípio duas bibliotecas. Para isso vamos utilizar duas ferramentas importantes, o <a href="https://lerna.js.org/">Lerna</a> e o <a href="https://classic.yarnpkg.com/en/docs/workspaces/">Yarn Workspaces</a>. Cada uma delas tem o seu papel em nos fornecer funcionalidades que vão nos ajudar a gerenciar nosso monorepo, por isso devem ser usadas em conjunto, já que <em>uma não substitui a outra</em>.</p>
+<p>Vamos falar um pouco dos dois antes de partir pro código.</p>
 <h3>Yarn Workspaces</h3>
 <p>O Yarn é um gerenciador de dependências assim como o npm, e possui a funcionalidade de workspaces que nos permite gerenciar repositórios que são monorepos. Basicamente o Yarn Workspaces fica responsável por gerenciar as dependências do projeto e fazer a distinção de quais dependências são utilizadas por qual projeto dentro do monorepo, e quais são globais e servem para o projeto como um todo. Cuidando então da parte mais de “baixo” de um monorepo.</p>
 <blockquote>
@@ -57,7 +57,7 @@
 <p>Já o Lerna é uma ferramenta que cuida da parte mais de “cima” de um monorepo, trazendo facilidades ao gerenciar um monorepo, e quando utilizado em conjunto com o Yarn Workspaces, ele deixa todo o trabalho de gerenciamento de dependências com o Yarn, e cuida mais da parte de execução de comandos, e publicação desses pacotes, assim como gerenciando a versão (utilizando <a href="https://semver.org/">semver</a>) de cada projeto, seja com uma versão única para todos, ou diferente.</p>
 <p>Agora para começar vamos instalar os dois:</p>
 <blockquote>
-<p>O Yarn possui seus próprios métodos de <a href="https://classic.yarnpkg.com/en/docs/install">instalação dependendo do sistema operacional</a>
+<p>O Yarn possui seus próprios métodos de <a href="https://classic.yarnpkg.com/en/docs/install">instalação dependendo do sistema operacional</a>.
 Para manter a simplicidade iremos instalar da forma mais simples, apesar de <a href="https://classic.yarnpkg.com/en/docs/install/#alternatives-stable">não recomendada pelo Yarn</a></p>
 </blockquote>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g <span class="token function">yarn</span>
@@ -162,7 +162,7 @@ $ <span class="token function">npm</span> <span class="token function">install</
   </a>
     </span></p>
 <h2>Publicando nossos pacotes</h2>
-<p>Agora vamos ver como publicar nossos pacotes e testa-los localmente, e depois como publicá-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).</p>
+<p>Agora vamos ver como publicar nossos pacotes e testá-los localmente, e depois como publicá-los diretamente no NPM ou em algum outro registro privado (comum em grandes empresas).</p>
 <h3>Verdaccio</h3>
 <p>Para publicar nossos pacotes localmente vamos utilizar o <a href="https://verdaccio.org/docs/en/installation">Verdaccio</a> que é um registro privado feito com NodeJs, de fácil configuração e que nos permite adicionar ou buscar pacotes pelo NPM, da mesma forma que buscamos e adicionamos pacotes no próprio registro do NPM.</p>
 <blockquote>
@@ -172,7 +172,7 @@ $ <span class="token function">npm</span> <span class="token function">install</
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> -g verdaccio</code></pre></div>
 <p>E iniciá-lo:</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ verdaccio</code></pre></div>
-<p>Ele vai retornar para a gente, em qual URL o registro dele esta rodando e qual o seu arquivo de configuração:</p>
+<p>Ele vai retornar em qual URL o registro dele esta rodando e qual o seu arquivo de configuração:</p>
 <p><span
       class="gatsby-resp-image-wrapper"
       style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; "
@@ -389,6 +389,8 @@ module<span class="token punctuation">.</span>exports <span class="token operato
   </a>
     </span></p>
 <p>Essa é a funcionalidade do Lerna de histório de mudanças através das mensagens de cada commit. Ele pega essas mensagens e lista elas nesse arquivo de Changelog, deixando mais fácil o rastreamento de mudanças das nossas bibliotecas.</p>
+<h2>Source code</h2>
+<p>O código do projeto de teste usado como exemplo nesse artigo <a href="https://github.com/vfreitas-/blog-example-monorepo-javascript">pode ser encontrado aqui</a></p>
 <h2>Por hoje é só</h2>
 <p>Uma evolução do que aprendemos aqui hoje, seria configurarmos esse processo de release de forma automatizada ao se realizar um commit ou merge de uma Pull Request na branch master por exemplo, dessa forma as versões dos nossos pacotes sempre seriam geradas automaticamente em cada merge e publicadas no registro, habilitando então um processo de CI/CD.</p>
 <p>Em um próximo artigo, falaremos em como realizar essa automatização em uma pipeline, além de boas práticas.</p>
