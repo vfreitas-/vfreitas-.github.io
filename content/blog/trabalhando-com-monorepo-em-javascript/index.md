@@ -1,8 +1,7 @@
 ---
 title: "Trabalhando com Monorepo em Javascript"
-date: "2020-09-18"
-draft: true
-description: "Configurando Lerna e Yarn workspaces"
+date: "2020-09-17"
+description: "Configurando Lerna e Yarn workspaces para criar e publicar bibliotecas Javascript com versionamento"
 ---
 
 ![Multirepo vs Monorepo](./monorepo-multirepo.png)
