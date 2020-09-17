@@ -1,6 +1,6 @@
 ---
 title: "Trabalhando com Monorepo em Javascript"
-date: "2020-09-17"
+date: "2020-09-16"
 description: "Configurando Lerna e Yarn workspaces para criar e publicar bibliotecas Javascript com versionamento"
 ---
 
@@ -288,7 +288,7 @@ O código do projeto de teste usado como exemplo nesse artigo [pode ser encontra
 
 ## Por hoje é só 
 
-Uma evolução do que aprendemos aqui hoje, seria configurarmos esse processo de release de forma automatizada ao se realizar um commit ou merge de uma Pull Request na branch master por exemplo, dessa forma as versões dos nossos pacotes sempre seriam geradas automaticamente em cada merge e publicadas no registro, habilitando então um processo de CI/CD.
+Uma evolução do que aprendemos aqui hoje seria configurarmos esse processo de release de forma automatizada ao se realizar um commit ou merge de uma Pull Request na branch master por exemplo, dessa forma as versões dos nossos pacotes sempre seriam geradas automaticamente em cada merge e publicadas no registro, habilitando então um processo de CI/CD.
 
 Em um próximo artigo, falaremos em como realizar essa automatização em uma pipeline, além de boas práticas.
 
