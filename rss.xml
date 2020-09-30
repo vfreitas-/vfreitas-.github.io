@@ -1,4 +1,149 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://vfreitas.com.br</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 17 Sep 2020 22:48:40 GMT</lastBuildDate><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas…]]></description><link>https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Wed, 16 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://vfreitas.com.br</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Sep 2020 02:23:57 GMT</lastBuildDate><item><title><![CDATA[Escrevendo CSS do futuro: PostCSS Preset Env]]></title><description><![CDATA[PostCSS é uma ferramenta que já está no mercado a um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para…]]></description><link>https://vfreitas.com.br/postcss-preset-env/</link><guid isPermaLink="false">https://vfreitas.com.br/postcss-preset-env/</guid><pubDate>Wed, 30 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/7d72798fa448ade88dc58144f3e2746e/6297e/exemplo-postcss.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 53.37837837837838%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB6klEQVQoz12T2XajMBBE+YuJbTYLtIFYDWILjhPPw/z/D9W0MBN78lBH4HN0qa5qe0IVYKnCOc0eYgJ+cEYQsscZJSgai3JckXYLeP8J1rzjoFscs8umU959n56SOaqiRW5KlHUHIQ1OfrzBnKIoRWw6qOsN9e0L1fAb+fQHUb0gLCz8vMfhBeqdmUTXjqQO13XAMM3gqgRPJeI4RUgOWdHDfH6hvN/R2A/U9o6EwKxZIchtVAxPh1ppCBIjgFJO9MwNEoohitgGTMhJRB91OpeWPmAR1gSqZrBqQlSOTyAXLjuNkDI7nuJNfvAc2QFVPUBdZmTtgsjYbcRj1u565rgBhcqQFTQiFxvUlXHyHzCXZRgmkORMTiv0sCKgzN4I5KBv+qdaeHmWo21qFEWFuinQNBVlqJFKhURIRJSjJod6+oBabsjHGwSNKOg30ZDzboC80PPFQtMWeGki6TLlSABOACEE4jPfRg33DGVDDpfrJtUvUAQ03YTCjrROI7J+ghkG1DMBOc+gdQ6V0sWECmApTnt+j7VJwKsBvunBcovADFsJh6zDL9WS9nHpdO+ezkoYU5FDQZKbo9fFDndgXE+IaT3cioRUzL8SfspzF1z4wV7I9z/kBaiaCdyutCIz5UbFEPDZ7OU/4F/PwUWKnVgrBQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Exemplo de resultado do PostCSS&quot;
+        title=&quot;Exemplo de resultado do PostCSS&quot;
+        src=&quot;/static/7d72798fa448ade88dc58144f3e2746e/fcda8/exemplo-postcss.png&quot;
+        srcset=&quot;/static/7d72798fa448ade88dc58144f3e2746e/12f09/exemplo-postcss.png 148w,
+/static/7d72798fa448ade88dc58144f3e2746e/e4a3f/exemplo-postcss.png 295w,
+/static/7d72798fa448ade88dc58144f3e2746e/fcda8/exemplo-postcss.png 590w,
+/static/7d72798fa448ade88dc58144f3e2746e/efc66/exemplo-postcss.png 885w,
+/static/7d72798fa448ade88dc58144f3e2746e/c83ae/exemplo-postcss.png 1180w,
+/static/7d72798fa448ade88dc58144f3e2746e/6297e/exemplo-postcss.png 2044w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://postcss.org/&quot;&gt;PostCSS&lt;/a&gt; é uma ferramenta que já está no mercado a um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para CSS puro. Essa sintax diferente nos permite através de plugins customizar a forma como escrevemos CSS, de forma a torná-lo mais simples ou mais eficiente por exemplo. Para quem já conhece o PostCSS é muito similar ao &lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt; que é o compiler (ou transpiler) mais famoso de Javascript.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Caso queira saber mais sobre o que é um compiler ou transpiler, &lt;a href=&quot;https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/&quot;&gt;recomendo esse texto&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Nesse post vamos ver como usar o PostCSS em conjunto com o seu plugin &lt;a href=&quot;https://preset-env.cssdb.org/&quot;&gt;Preset Env&lt;/a&gt;, de forma que seja possível escrevermos CSS utilizando funcionalidades que ainda não existem nos navegadores, e mesmo assim obter um CSS que rode sem problemas neles.&lt;/p&gt;
+&lt;h2&gt;Futuro do CSS&lt;/h2&gt;
+&lt;p&gt;Antes de ir para a prática vamos entender o que são essas funcionalidades novas. De forma &lt;em&gt;resumida&lt;/em&gt; assim como no Javascript o CSS possui um processo de adição de novas funcionalidades, que são organizadas em etapas (Stages). E em cada etapa passam por diferentes tipos de testes e requisitos, até que finalmente são implementadas pelos navegadores (como o Chrome). Só que esse processo é bem longo e demorado, então enquanto essas funcionalidades não chegam nos navegadores, podemos utilizar ferramentas como o PostCSS para traduzirem essas funcionalidades novas em CSS atual.&lt;/p&gt;
+&lt;p&gt;Podemos ver as próximas funcionalidades do CSS nos links abaixo:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://cssdb.org/&quot;&gt;CSS DB: Lista de funcionalidades&lt;/a&gt;.
+&lt;a href=&quot;https://preset-env.cssdb.org/features&quot;&gt;PostCSS Preset Env: Cada funcionalidade e exemplos&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Stages&lt;/h3&gt;
+&lt;p&gt;Vamos falar um pouco sobre as etapas pelas quais cada funcionalidade passa:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;Stage 0: Ambição&lt;/em&gt; - Uma ideia ou um rascunho de uma nova funcionalidade&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Stage 1: Experimento&lt;/em&gt; - Um teste/experimento que procura resolver/melhorar a linguagem&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Stage 2: Possível&lt;/em&gt; - Quando a nova funcionalidade já possui uma solução técnica mas ainda pode mudar&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Stage 3: Adotado&lt;/em&gt; - Foi adotada pela comunidade tanto como ideia quanto tecnicamente e terá poucas mudanças&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Stage 4: Padronizado&lt;/em&gt; - É um novo padrão na web e será implementada pelos navegadores, etc&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;X: Rejeitado&lt;/em&gt; - A proposta foi rejeitada&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Como utilizar&lt;/h2&gt;
+&lt;p&gt;Primeiro de tudo o jeito mais fácil de começar a brincar com as novas funcionalidades do CSS é utilizando o &lt;a href=&quot;https://preset-env.cssdb.org/playground&quot;&gt;playground do próprio Preset Env&lt;/a&gt;, onde é possível testar todas as funcionalidades de todos os Stages e ver na hora o CSS gerado como resultado do compiler.&lt;/p&gt;
+&lt;p&gt;Recomendo brincar um pouco la e descobrir as novas funcionalidades. Duas bem bacanas que estão mudando bastante a forma de se usar CSS puro são:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties&quot;&gt;Custom Properties&lt;/a&gt; - Que inclusive já foram implementadas pelos navegadores mais modernos e estão no Stage 3.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://drafts.csswg.org/css-nesting/#:~:text=A%20style%20rule%20can%20be,compound%20selector%20of%20the%20selector.&quot;&gt;Nesting Rules&lt;/a&gt; - Que nos permite escrever CSS em cascata (como nos pre-processadores Sass/Less/Stylus), porém ainda está no Stage 1.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Instalando no meu projeto&lt;/h3&gt;
+&lt;p&gt;Normalmente o PostCSS já possui integrações com os frameworks mais famosos do mercado (como React, Angular e Vue), nesses casos recomendo que você veja a documentação do seu framework ou checar a documentação do Bundler utilizado (Webpack, Rollup). Vou deixar alguns links no final do post para tutoriais explicando como instalar em cada framework/bundler.&lt;/p&gt;
+&lt;p&gt;Para utilizarmos o Preset Env junto com o PostCSS primeiro instalamos tanto o PostCSS com o Preset Env:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; postcss postcss-preset-env --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Depois criamos um arquivo chamado &lt;code class=&quot;language-text&quot;&gt;postcss.config.js&lt;/code&gt; e adicionamos a nossa configuração:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;postcss-preset-env&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;/* Opções */&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Depois podemos configurá-lo por exemplo para usarmos todas as novas funcionalidades desde o Stage 1:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;postcss-preset-env&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      stage&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Podemos também habilitar funcionalidades especificas ou definir para quais navegadores o PostCSS deve gerar o nosso CSS:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  plugins&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;postcss-preset-env&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      stage&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Esse Stage não suporta Nesting Rules&lt;/span&gt;
+      features&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token string&quot;&gt;&apos;nesting-rules&apos;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Porém aqui forçamos que ela seja utilizada&lt;/span&gt;
+      &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      browsers&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;last 2 versions&apos;&lt;/span&gt; 
+      &lt;span class=&quot;token comment&quot;&gt;// Aqui dizemos que o PostCSS deve compilar funcionalidades &lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// Que não rodem nas ultimas 2 versões dos navegadores mais comuns no mercado&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Para saber mais sobre a parte de browsers do PostCSS e como configurar &lt;a href=&quot;https://css-tricks.com/browserlist-good-idea/&quot;&gt;recomendo esse link&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;#done&lt;/h2&gt;
+&lt;p&gt;Espero que tenham gostado, e qualquer dúvida ou sugestão só mandar um comentário aqui em baixo ou uma mensagem no Twitter.&lt;/p&gt;
+&lt;p&gt;Obrigado por ler!&lt;/p&gt;
+&lt;h2&gt;Referencias e links úteis&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/csstools/postcss-preset-env&quot;&gt;PostCSS Preset Env&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://postcss.org/&quot;&gt;PostCSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nextjs.org/docs/advanced-features/customizing-postcss-config&quot;&gt;Next.js com PostCSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vue-loader.vuejs.org/guide/pre-processors.html#postcss&quot;&gt;Vue Loader com PostCSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/vitejs/vite#postcss&quot;&gt;Vite com PostCSS&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webpack.js.org/loaders/postcss-loader/&quot;&gt;Webpack com PostCSS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Acessibilidade no Front: Primeiros passos]]></title><description><![CDATA[Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça…]]></description><link>https://vfreitas.com.br/acessibilidade-no-front/</link><guid isPermaLink="false">https://vfreitas.com.br/acessibilidade-no-front/</guid><pubDate>Mon, 28 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/a2510/a11y.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHtzrKFF//EABkQAAIDAQAAAAAAAAAAAAAAAAABEBExQf/aAAgBAQABBQKmaJR0/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhABAQEAAAAAAAAAAAAAAAAAMQAg/9oACAEBAAY/AmZx/8QAHBABAAIBBQAAAAAAAAAAAAAAAQAQUREhMUGR/9oACAEBAAE/IXI0hgvYgbqgDh1X/9oADAMBAAIAAwAAABDfz//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EIf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCn/8QAHRABAAMAAQUAAAAAAAAAAAAAAQARIRAxYYGx4f/aAAgBAQABPxACoi3qFfJZafDZoI+oliOkEUCqFHfj/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Accessibility to A11y&quot;
+        title=&quot;Accessibility to A11y&quot;
+        src=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/1c72d/a11y.jpg&quot;
+        srcset=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/a80bd/a11y.jpg 148w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/1c91a/a11y.jpg 295w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/1c72d/a11y.jpg 590w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/a8a14/a11y.jpg 885w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/a2510/a11y.jpg 1000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça fundamental. E para sermos inclusivos e entregarmos uma usabilidade boa para &lt;em&gt;todos os usuários&lt;/em&gt;, precisamos que nosso front seja acessível, mas por onde começar? Como testar e garantir uma boa acessibilidade? &lt;/p&gt;
+&lt;h2&gt;O que é acessibilidade e porque é importante&lt;/h2&gt;
+&lt;h2&gt;WCAG&lt;/h2&gt;
+&lt;p&gt;Web Content Accessibility Guidelines.&lt;/p&gt;
+&lt;h2&gt;Leitores de tela&lt;/h2&gt;
+&lt;h2&gt;Teclado&lt;/h2&gt;
+&lt;h2&gt;WAI-ARIA&lt;/h2&gt;
+&lt;h2&gt;Boas práticas&lt;/h2&gt;
+&lt;h2&gt;Testando&lt;/h2&gt;
+&lt;h2&gt;Ferramentas e referências&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas…]]></description><link>https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Wed, 16 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 581px; &quot;
     &gt;
