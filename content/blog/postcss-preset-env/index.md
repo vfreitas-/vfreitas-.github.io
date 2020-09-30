@@ -20,8 +20,8 @@ Antes de ir para a prática vamos entender o que são essas funcionalidades nova
 
 Podemos ver as próximas funcionalidades do CSS nos links abaixo:
 
-[CSS DB: Lista de funcionalidades](https://cssdb.org/).
-[PostCSS Preset Env: Cada funcionalidade e exemplos](https://preset-env.cssdb.org/features).
+- [CSS DB: Lista de funcionalidades](https://cssdb.org/).
+- [PostCSS Preset Env: Cada funcionalidade e exemplos](https://preset-env.cssdb.org/features).
 
 ### Stages
 
@@ -45,7 +45,7 @@ Recomendo brincar um pouco la e descobrir as novas funcionalidades. Duas bem bac
 
 ### Instalando no meu projeto
 
-Normalmente o PostCSS já possui integrações com os frameworks mais famosos do mercado (como React, Angular e Vue), nesses casos recomendo que você veja a documentação do seu framework ou checar a documentação do Bundler utilizado (Webpack, Rollup). Vou deixar alguns links no final do post para tutoriais explicando como instalar em cada framework/bundler.
+Normalmente o PostCSS já possui integrações com os frameworks mais famosos do mercado (como React, Angular e Vue), nesses casos recomendo que você veja a documentação do seu framework ou a documentação do Bundler utilizado (Webpack, Rollup). Vou deixar alguns links no final do post para tutoriais explicando como instalar em cada framework/bundler.
 
 Para utilizarmos o Preset Env junto com o PostCSS primeiro instalamos tanto o PostCSS com o Preset Env:
 
