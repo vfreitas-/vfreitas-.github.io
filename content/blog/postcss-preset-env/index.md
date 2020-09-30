@@ -7,7 +7,7 @@ description: "Como utilizar PostCSS para escrever CSS usando suas novas funciona
 
 ![Exemplo de resultado do PostCSS](./exemplo-postcss.png)
 
-[PostCSS](https://postcss.org/) é uma ferramenta que já está no mercado a um bom tempo, e nos permite "compilar" um código escrito com uma sintax diferente, para CSS puro. Essa sintax diferente nos permite através de plugins customizar a forma como escrevemos CSS, de forma a torná-lo mais simples ou mais eficiente por exemplo. Para quem já conhece o PostCSS é muito similar ao [Babel](https://babeljs.io/) que é o compiler (ou transpiler) mais famoso de Javascript.
+[PostCSS](https://postcss.org/) é uma ferramenta que já está no mercado há um bom tempo, e nos permite "compilar" um código escrito com uma sintax diferente, para CSS puro. Essa sintax diferente nos permite através de plugins customizar a forma como escrevemos CSS, de forma a torná-lo mais simples ou mais eficiente por exemplo. Para quem já conhece o PostCSS é muito similar ao [Babel](https://babeljs.io/) que é o compiler (ou transpiler) mais famoso de Javascript.
 
 > Caso queira saber mais sobre o que é um compiler ou transpiler, [recomendo esse texto](https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/).
 
