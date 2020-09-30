@@ -1,7 +1,6 @@
 ---
 title: "Escrevendo CSS do futuro: PostCSS Preset Env"
 date: "2020-09-30"
-draft: true
 description: "Como utilizar PostCSS para escrever CSS usando suas novas funcionalidades nos navegadores atuais."
 ---
 
@@ -43,7 +42,7 @@ Recomendo brincar um pouco la e descobrir as novas funcionalidades. Duas bem bac
 - [Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - Que inclusive já foram implementadas pelos navegadores mais modernos e estão no Stage 3.
 - [Nesting Rules](https://drafts.csswg.org/css-nesting/#:~:text=A%20style%20rule%20can%20be,compound%20selector%20of%20the%20selector.) - Que nos permite escrever CSS em cascata (como nos pre-processadores Sass/Less/Stylus), porém ainda está no Stage 1.
 
-### Instalando no meu projeto
+### Instalando no projeto
 
 Normalmente o PostCSS já possui integrações com os frameworks mais famosos do mercado (como React, Angular e Vue), nesses casos recomendo que você veja a documentação do seu framework ou a documentação do Bundler utilizado (Webpack, Rollup). Vou deixar alguns links no final do post para tutoriais explicando como instalar em cada framework/bundler.
 
@@ -83,11 +82,11 @@ module.exports = {
     'postcss-preset-env': {
       stage: 3 // Esse Stage não suporta Nesting Rules
       features: {
-        'nesting-rules': true // Porém aqui forçamos que ela seja utilizada
+        'nesting-rules': true // Porém aqui indicamos que ela seja utilizada
       },
       browsers: 'last 2 versions' 
       // Aqui dizemos que o PostCSS deve compilar funcionalidades 
-      // Que não rodem nas ultimas 2 versões dos navegadores mais comuns no mercado
+      // que não rodem nas ultimas 2 versões dos navegadores mais comuns no mercado
     },
   }
 }
