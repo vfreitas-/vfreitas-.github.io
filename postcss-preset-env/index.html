@@ -59,7 +59,7 @@
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">Custom Properties</a> - Que inclusive já foram implementadas pelos navegadores mais modernos e estão no Stage 3.</li>
 <li><a href="https://drafts.csswg.org/css-nesting/#:~:text=A%20style%20rule%20can%20be,compound%20selector%20of%20the%20selector.">Nesting Rules</a> - Que nos permite escrever CSS em cascata (como nos pre-processadores Sass/Less/Stylus), porém ainda está no Stage 1.</li>
 </ul>
-<h3>Instalando no meu projeto</h3>
+<h3>Instalando no projeto</h3>
 <p>Normalmente o PostCSS já possui integrações com os frameworks mais famosos do mercado (como React, Angular e Vue), nesses casos recomendo que você veja a documentação do seu framework ou a documentação do Bundler utilizado (Webpack, Rollup). Vou deixar alguns links no final do post para tutoriais explicando como instalar em cada framework/bundler.</p>
 <p>Para utilizarmos o Preset Env junto com o PostCSS primeiro instalamos tanto o PostCSS com o Preset Env:</p>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> postcss postcss-preset-env --save-dev</code></pre></div>
@@ -83,11 +83,11 @@
     <span class="token string">'postcss-preset-env'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
       stage<span class="token operator">:</span> <span class="token number">3</span> <span class="token comment">// Esse Stage não suporta Nesting Rules</span>
       features<span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token string">'nesting-rules'</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// Porém aqui forçamos que ela seja utilizada</span>
+        <span class="token string">'nesting-rules'</span><span class="token operator">:</span> <span class="token boolean">true</span> <span class="token comment">// Porém aqui indicamos que ela seja utilizada</span>
       <span class="token punctuation">}</span><span class="token punctuation">,</span>
       browsers<span class="token operator">:</span> <span class="token string">'last 2 versions'</span> 
       <span class="token comment">// Aqui dizemos que o PostCSS deve compilar funcionalidades </span>
-      <span class="token comment">// Que não rodem nas ultimas 2 versões dos navegadores mais comuns no mercado</span>
+      <span class="token comment">// que não rodem nas ultimas 2 versões dos navegadores mais comuns no mercado</span>
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span></code></pre></div>
