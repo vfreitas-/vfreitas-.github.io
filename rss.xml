@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://vfreitas.com.br</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Sep 2020 03:25:32 GMT</lastBuildDate><item><title><![CDATA[Acessibilidade no Front: Primeiros passos]]></title><description><![CDATA[Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça…]]></description><link>https://vfreitas.com.br/acessibilidade-no-front/</link><guid isPermaLink="false">https://vfreitas.com.br/acessibilidade-no-front/</guid><pubDate>Tue, 20 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://vfreitas.com.br</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Sep 2020 03:32:50 GMT</lastBuildDate><item><title><![CDATA[Acessibilidade no Front: Primeiros passos]]></title><description><![CDATA[Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça…]]></description><link>https://vfreitas.com.br/acessibilidade-no-front/</link><guid isPermaLink="false">https://vfreitas.com.br/acessibilidade-no-front/</guid><pubDate>Tue, 20 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
@@ -38,7 +38,7 @@
 &lt;h2&gt;WAI-ARIA&lt;/h2&gt;
 &lt;h2&gt;Boas práticas&lt;/h2&gt;
 &lt;h2&gt;Testando&lt;/h2&gt;
-&lt;h2&gt;Ferramentas e referências&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Escrevendo CSS do futuro: PostCSS Preset Env]]></title><description><![CDATA[PostCSS é uma ferramenta que já está no mercado a um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para…]]></description><link>https://vfreitas.com.br/postcss-preset-env/</link><guid isPermaLink="false">https://vfreitas.com.br/postcss-preset-env/</guid><pubDate>Wed, 30 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;h2&gt;Ferramentas e referências&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Escrevendo CSS do futuro: PostCSS Preset Env]]></title><description><![CDATA[PostCSS é uma ferramenta que já está no mercado há um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para…]]></description><link>https://vfreitas.com.br/postcss-preset-env/</link><guid isPermaLink="false">https://vfreitas.com.br/postcss-preset-env/</guid><pubDate>Wed, 30 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
@@ -70,7 +70,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://postcss.org/&quot;&gt;PostCSS&lt;/a&gt; é uma ferramenta que já está no mercado a um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para CSS puro. Essa sintax diferente nos permite através de plugins customizar a forma como escrevemos CSS, de forma a torná-lo mais simples ou mais eficiente por exemplo. Para quem já conhece o PostCSS é muito similar ao &lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt; que é o compiler (ou transpiler) mais famoso de Javascript.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://postcss.org/&quot;&gt;PostCSS&lt;/a&gt; é uma ferramenta que já está no mercado há um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para CSS puro. Essa sintax diferente nos permite através de plugins customizar a forma como escrevemos CSS, de forma a torná-lo mais simples ou mais eficiente por exemplo. Para quem já conhece o PostCSS é muito similar ao &lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt; que é o compiler (ou transpiler) mais famoso de Javascript.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Caso queira saber mais sobre o que é um compiler ou transpiler, &lt;a href=&quot;https://www.stevefenton.co.uk/2012/11/compiling-vs-transpiling/&quot;&gt;recomendo esse texto&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -78,8 +78,10 @@
 &lt;h2&gt;Futuro do CSS&lt;/h2&gt;
 &lt;p&gt;Antes de ir para a prática vamos entender o que são essas funcionalidades novas. De forma &lt;em&gt;resumida&lt;/em&gt; assim como no Javascript o CSS possui um processo de adição de novas funcionalidades, que são organizadas em etapas (Stages). E em cada etapa passam por diferentes tipos de testes e requisitos, até que finalmente são implementadas pelos navegadores (como o Chrome). Só que esse processo é bem longo e demorado, então enquanto essas funcionalidades não chegam nos navegadores, podemos utilizar ferramentas como o PostCSS para traduzirem essas funcionalidades novas em CSS atual.&lt;/p&gt;
 &lt;p&gt;Podemos ver as próximas funcionalidades do CSS nos links abaixo:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://cssdb.org/&quot;&gt;CSS DB: Lista de funcionalidades&lt;/a&gt;.
-&lt;a href=&quot;https://preset-env.cssdb.org/features&quot;&gt;PostCSS Preset Env: Cada funcionalidade e exemplos&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cssdb.org/&quot;&gt;CSS DB: Lista de funcionalidades&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://preset-env.cssdb.org/features&quot;&gt;PostCSS Preset Env: Cada funcionalidade e exemplos&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3&gt;Stages&lt;/h3&gt;
 &lt;p&gt;Vamos falar um pouco sobre as etapas pelas quais cada funcionalidade passa:&lt;/p&gt;
 &lt;ul&gt;
@@ -98,7 +100,7 @@
 &lt;li&gt;&lt;a href=&quot;https://drafts.csswg.org/css-nesting/#:~:text=A%20style%20rule%20can%20be,compound%20selector%20of%20the%20selector.&quot;&gt;Nesting Rules&lt;/a&gt; - Que nos permite escrever CSS em cascata (como nos pre-processadores Sass/Less/Stylus), porém ainda está no Stage 1.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Instalando no meu projeto&lt;/h3&gt;
-&lt;p&gt;Normalmente o PostCSS já possui integrações com os frameworks mais famosos do mercado (como React, Angular e Vue), nesses casos recomendo que você veja a documentação do seu framework ou checar a documentação do Bundler utilizado (Webpack, Rollup). Vou deixar alguns links no final do post para tutoriais explicando como instalar em cada framework/bundler.&lt;/p&gt;
+&lt;p&gt;Normalmente o PostCSS já possui integrações com os frameworks mais famosos do mercado (como React, Angular e Vue), nesses casos recomendo que você veja a documentação do seu framework ou a documentação do Bundler utilizado (Webpack, Rollup). Vou deixar alguns links no final do post para tutoriais explicando como instalar em cada framework/bundler.&lt;/p&gt;
 &lt;p&gt;Para utilizarmos o Preset Env junto com o PostCSS primeiro instalamos tanto o PostCSS com o Preset Env:&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;npm&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; postcss postcss-preset-env --save-dev&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Depois criamos um arquivo chamado &lt;code class=&quot;language-text&quot;&gt;postcss.config.js&lt;/code&gt; e adicionamos a nossa configuração:&lt;/p&gt;
