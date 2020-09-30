@@ -1,6 +1,6 @@
 ---
 title: "Acessibilidade no Front: Primeiros passos"
-date: "2020-09-28"
+date: "2020-10-20"
 draft: true
 description: "Primeiros passos para deixar seu front acessível e como testar"
 ---
