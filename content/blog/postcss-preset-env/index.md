@@ -1,6 +1,6 @@
 ---
 title: "Escrevendo CSS do futuro: PostCSS Preset Env"
-date: "2020-09-28"
+date: "2020-09-30"
 draft: true
 description: "Como utilizar PostCSS para escrever CSS usando suas novas funcionalidades nos navegadores atuais."
 ---
