@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://vfreitas.com.br</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Sep 2020 02:24:42 GMT</lastBuildDate><item><title><![CDATA[Escrevendo CSS do futuro: PostCSS Preset Env]]></title><description><![CDATA[PostCSS é uma ferramenta que já está no mercado a um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para…]]></description><link>https://vfreitas.com.br/postcss-preset-env/</link><guid isPermaLink="false">https://vfreitas.com.br/postcss-preset-env/</guid><pubDate>Wed, 30 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Vitor Freitas]]></title><description><![CDATA[Um blog de um desenvolvedor Front End, sobre Javascript, HTML, CSS e todo o seu ecosistema.]]></description><link>https://vfreitas.com.br</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 30 Sep 2020 03:25:32 GMT</lastBuildDate><item><title><![CDATA[Acessibilidade no Front: Primeiros passos]]></title><description><![CDATA[Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça…]]></description><link>https://vfreitas.com.br/acessibilidade-no-front/</link><guid isPermaLink="false">https://vfreitas.com.br/acessibilidade-no-front/</guid><pubDate>Tue, 20 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/a2510/a11y.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHtzrKFF//EABkQAAIDAQAAAAAAAAAAAAAAAAABEBExQf/aAAgBAQABBQKmaJR0/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhABAQEAAAAAAAAAAAAAAAAAMQAg/9oACAEBAAY/AmZx/8QAHBABAAIBBQAAAAAAAAAAAAAAAQAQUREhMUGR/9oACAEBAAE/IXI0hgvYgbqgDh1X/9oADAMBAAIAAwAAABDfz//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EIf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCn/8QAHRABAAMAAQUAAAAAAAAAAAAAAQARIRAxYYGx4f/aAAgBAQABPxACoi3qFfJZafDZoI+oliOkEUCqFHfj/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Accessibility to A11y&quot;
+        title=&quot;Accessibility to A11y&quot;
+        src=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/1c72d/a11y.jpg&quot;
+        srcset=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/a80bd/a11y.jpg 148w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/1c91a/a11y.jpg 295w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/1c72d/a11y.jpg 590w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/a8a14/a11y.jpg 885w,
+/static/dc437c1ad3ad0871d5150c94b2e430ce/a2510/a11y.jpg 1000w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça fundamental. E para sermos inclusivos e entregarmos uma usabilidade boa para &lt;em&gt;todos os usuários&lt;/em&gt;, precisamos que nosso front seja acessível, mas por onde começar? Como testar e garantir uma boa acessibilidade? &lt;/p&gt;
+&lt;h2&gt;O que é acessibilidade e porque é importante&lt;/h2&gt;
+&lt;h2&gt;WCAG&lt;/h2&gt;
+&lt;p&gt;Web Content Accessibility Guidelines.&lt;/p&gt;
+&lt;h2&gt;Leitores de tela&lt;/h2&gt;
+&lt;h2&gt;Teclado&lt;/h2&gt;
+&lt;h2&gt;WAI-ARIA&lt;/h2&gt;
+&lt;h2&gt;Boas práticas&lt;/h2&gt;
+&lt;h2&gt;Testando&lt;/h2&gt;
+&lt;h2&gt;Ferramentas e referências&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Escrevendo CSS do futuro: PostCSS Preset Env]]></title><description><![CDATA[PostCSS é uma ferramenta que já está no mercado a um bom tempo, e nos permite “compilar” um código escrito com uma sintax diferente, para…]]></description><link>https://vfreitas.com.br/postcss-preset-env/</link><guid isPermaLink="false">https://vfreitas.com.br/postcss-preset-env/</guid><pubDate>Wed, 30 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
     &gt;
@@ -103,47 +143,7 @@
 &lt;li&gt;&lt;a href=&quot;https://vue-loader.vuejs.org/guide/pre-processors.html#postcss&quot;&gt;Vue Loader com PostCSS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://github.com/vitejs/vite#postcss&quot;&gt;Vite com PostCSS&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://webpack.js.org/loaders/postcss-loader/&quot;&gt;Webpack com PostCSS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Acessibilidade no Front: Primeiros passos]]></title><description><![CDATA[Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça…]]></description><link>https://vfreitas.com.br/acessibilidade-no-front/</link><guid isPermaLink="false">https://vfreitas.com.br/acessibilidade-no-front/</guid><pubDate>Mon, 28 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 590px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/a2510/a11y.jpg&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAKABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIDBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAHtzrKFF//EABkQAAIDAQAAAAAAAAAAAAAAAAABEBExQf/aAAgBAQABBQKmaJR0/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAFhABAQEAAAAAAAAAAAAAAAAAMQAg/9oACAEBAAY/AmZx/8QAHBABAAIBBQAAAAAAAAAAAAAAAQAQUREhMUGR/9oACAEBAAE/IXI0hgvYgbqgDh1X/9oADAMBAAIAAwAAABDfz//EABURAQEAAAAAAAAAAAAAAAAAABAR/9oACAEDAQE/EIf/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCn/8QAHRABAAMAAQUAAAAAAAAAAAAAAQARIRAxYYGx4f/aAAgBAQABPxACoi3qFfJZafDZoI+oliOkEUCqFHfj/9k=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;Accessibility to A11y&quot;
-        title=&quot;Accessibility to A11y&quot;
-        src=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/1c72d/a11y.jpg&quot;
-        srcset=&quot;/static/dc437c1ad3ad0871d5150c94b2e430ce/a80bd/a11y.jpg 148w,
-/static/dc437c1ad3ad0871d5150c94b2e430ce/1c91a/a11y.jpg 295w,
-/static/dc437c1ad3ad0871d5150c94b2e430ce/1c72d/a11y.jpg 590w,
-/static/dc437c1ad3ad0871d5150c94b2e430ce/a8a14/a11y.jpg 885w,
-/static/dc437c1ad3ad0871d5150c94b2e430ce/a2510/a11y.jpg 1000w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;Como desenvolvedores front-end, ter um pé em usabilidade e entender como entregar uma boa experiencia para o nosso usuário é uma peça fundamental. E para sermos inclusivos e entregarmos uma usabilidade boa para &lt;em&gt;todos os usuários&lt;/em&gt;, precisamos que nosso front seja acessível, mas por onde começar? Como testar e garantir uma boa acessibilidade? &lt;/p&gt;
-&lt;h2&gt;O que é acessibilidade e porque é importante&lt;/h2&gt;
-&lt;h2&gt;WCAG&lt;/h2&gt;
-&lt;p&gt;Web Content Accessibility Guidelines.&lt;/p&gt;
-&lt;h2&gt;Leitores de tela&lt;/h2&gt;
-&lt;h2&gt;Teclado&lt;/h2&gt;
-&lt;h2&gt;WAI-ARIA&lt;/h2&gt;
-&lt;h2&gt;Boas práticas&lt;/h2&gt;
-&lt;h2&gt;Testando&lt;/h2&gt;
-&lt;h2&gt;Ferramentas e referências&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas…]]></description><link>https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Wed, 16 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Trabalhando com Monorepo em Javascript]]></title><description><![CDATA[Já ouviu falar do termo Monorepo? Ou Multirepo? São termos utilizados para definir dois modelos arquiteturais, onde resumidamente são formas…]]></description><link>https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</link><guid isPermaLink="false">https://vfreitas.com.br/trabalhando-com-monorepo-em-javascript/</guid><pubDate>Wed, 16 Sep 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 581px; &quot;
     &gt;
