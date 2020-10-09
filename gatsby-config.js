@@ -62,8 +62,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Blog | Vitor Freitas`,
-        short_name: `Vitor Freitas`,
+        name: `Vitor Freitas - Blog`,
+        short_name: `VF - Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#0088ff`,
