@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
             node {
               fields {
                 slug
+                draft
               }
               frontmatter {
                 title
@@ -37,6 +38,11 @@ exports.createPages = async ({ graphql, actions }) => {
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
+    let shouldShowNext = true
+
+    if (next) {
+      shouldShowNext = !next.fields.draft
+    }
 
     createPage({
       path: post.node.fields.slug,
@@ -44,7 +50,7 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: post.node.fields.slug,
         previous,
-        next,
+        next: shouldShowNext && next,
       },
     })
   })
