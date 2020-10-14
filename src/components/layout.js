@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 import { rhythm } from "../utils/typography"
+import GoTop from "./gotop"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -64,6 +65,7 @@ const Layout = ({ location, title, children }) => {
       <footer style={{ marginTop: 'auto' }}>
         © {new Date().getFullYear()}, vfreitas.com.br
       </footer>
+      <GoTop />
     </div>
   )
 }
