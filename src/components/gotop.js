@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
+import { isBrowser } from "../utils/server"
 
-const rootEl = document.documentElement
+const rootEl = isBrowser() ? document.documentElement : null
 
 function scrollTop () {
   rootEl.scrollTo({
